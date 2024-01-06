@@ -3,8 +3,6 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const config = require('config');
 
-
-
 // Check if MONGODB_URI is defined
 const mongodbUri = config.get('MONGODB_URI');
 if (!mongodbUri) {
@@ -29,8 +27,6 @@ mongoose.connect(mongodbUri, { useNewUrlParser: true, useUnifiedTopology: true }
     console.error('MongoDB connection error:', error);
     process.exit(1); // Exit the process if MongoDB connection fails
   });
-
-// Rest of your server code...
 
 
 
